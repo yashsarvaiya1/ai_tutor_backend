@@ -4,6 +4,6 @@ from services.mcq_service import generate_mcqs
 
 router = APIRouter()
 
-@router.post("/generate_mcq",response_model=MCQResponse)
+@router.post("/mcq",response_model=MCQResponse)
 async def getMcq(request: MCQRequest):
     return generate_mcqs(request.topic)
